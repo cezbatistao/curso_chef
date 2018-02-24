@@ -1,5 +1,5 @@
-This is the property of Carlos E Z Batistao
+This is the property of <%= @name %>
   HOSTNAME: <%= node['hostname'] %>
-  IPADDRESS: <%= node['ipaddress']  %>
+  IPADDRESS: <%= @ipaddress  %>
   CPU: <%= node['cpu']['0']['mhz'] %>
-  MEMORY: <%= node['memory']['total'] %>
+  MEMORY: <%= @total_memory %>
