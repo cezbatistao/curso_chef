@@ -40,3 +40,8 @@ sudo chef-client -zr "recipe[apache]"
 ```bash 
 sudo chef-client -zr "recipe[workstation],recipe[apache]"
 ```
+
+#### Gerar um arquivo de template
+```bash 
+chef generate template cookbooks/apache index.html
+```
