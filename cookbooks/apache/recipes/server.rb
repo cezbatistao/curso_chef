@@ -16,8 +16,10 @@ end
 
 template '/var/www/html/index.html' do
   source 'index.html.erb'
+#  notifies :restart, 'service[apache2]', :immediately
 end
 
 service 'apache2' do
   action [:enable, :start]
+  subscribes :restart, 'template[/var/www/html/index.html]', :immediately
 end
